@@ -28,15 +28,8 @@
         <p class="mt-8 text-lg font-medium text-pretty text-gray-600 sm:text-xl/8 dark:text-gray-400">
           Four tiny packages for the CSS typography properties Tailwind doesn’t ship: hanging punctuation, small caps, drop caps and text rendering. Each one is a single CSS file of <code class="font-mono text-base text-gray-900 dark:text-white">@utility</code> rules, so variants and arbitrary values work as usual.
         </p>
-        <div class="mt-10 overflow-x-auto rounded-xl bg-gray-900 p-5 font-mono text-sm/6 text-gray-300 ring-1 ring-white/10 dark:bg-gray-800/60">
-          <pre><span class="text-gray-500">/* app.css */</span>
-<span class="text-pink-400">@import</span> <span class="text-emerald-300">"tailwindcss"</span>;
-<span class="text-pink-400">@import</span> <span class="text-emerald-300">"tailwind-hanging-punctuation"</span>;
-<span class="text-pink-400">@import</span> <span class="text-emerald-300">"tailwind-font-variant-caps"</span>;
-<span class="text-pink-400">@import</span> <span class="text-emerald-300">"tailwind-initial-letter"</span>;
-<span class="text-pink-400">@import</span> <span class="text-emerald-300">"tailwindcss-text-rendering"</span>;</pre>
-        </div>
         <nav aria-label="Packages" class="mt-8 flex flex-wrap gap-x-6 gap-y-2 text-sm/6 font-semibold">
+          <a href="#install" class="text-gray-900 hover:text-indigo-600 dark:text-white dark:hover:text-indigo-400">Install</a>
           <a href="#hanging-punctuation" class="text-gray-900 hover:text-indigo-600 dark:text-white dark:hover:text-indigo-400">Hanging punctuation</a>
           <a href="#font-variant-caps" class="text-gray-900 hover:text-indigo-600 dark:text-white dark:hover:text-indigo-400">Small caps</a>
           <a href="#initial-letter" class="text-gray-900 hover:text-indigo-600 dark:text-white dark:hover:text-indigo-400">Drop caps</a>
@@ -48,13 +41,68 @@
 
     <main class="px-6 pb-24 lg:px-8">
       <div class="mx-auto max-w-3xl space-y-24">
+        <!-- install -->
+        <section id="install" aria-labelledby="install-title" class="scroll-mt-8">
+          <h2 id="install-title" class="text-3xl font-semibold tracking-tight text-pretty text-gray-900 dark:text-white">Install</h2>
+          <p class="mt-6 text-base/7">Requires Tailwind CSS v4. Install only the packages you need; each one is a single CSS file.</p>
+          <ol class="mt-10 space-y-10">
+            <li class="flex gap-x-4">
+              <span class="flex size-7 flex-none items-center justify-center rounded-full bg-indigo-600 font-mono text-sm font-semibold text-white dark:bg-indigo-500" aria-hidden="true">1</span>
+              <div class="min-w-0 flex-auto">
+                <h3 class="text-base/7 font-semibold text-gray-900 dark:text-white">Add the packages</h3>
+                <pre class="mt-4 overflow-x-auto rounded-xl bg-gray-900 p-5 font-mono text-sm/6 text-gray-300 ring-1 ring-white/10 dark:bg-gray-800/60">npm install \
+  tailwind-hanging-punctuation \
+  tailwind-font-variant-caps \
+  tailwind-initial-letter \
+  tailwindcss-text-rendering</pre>
+              </div>
+            </li>
+            <li class="flex gap-x-4">
+              <span class="flex size-7 flex-none items-center justify-center rounded-full bg-indigo-600 font-mono text-sm font-semibold text-white dark:bg-indigo-500" aria-hidden="true">2</span>
+              <div class="min-w-0 flex-auto">
+                <h3 class="text-base/7 font-semibold text-gray-900 dark:text-white">Import them after Tailwind in your CSS</h3>
+                <pre class="mt-4 overflow-x-auto rounded-xl bg-gray-900 p-5 font-mono text-sm/6 text-gray-300 ring-1 ring-white/10 dark:bg-gray-800/60"><span class="text-gray-500">/* app.css */</span>
+<span class="text-pink-400">@import</span> <span class="text-emerald-300">"tailwindcss"</span>;
+<span class="text-pink-400">@import</span> <span class="text-emerald-300">"tailwind-hanging-punctuation"</span>;
+<span class="text-pink-400">@import</span> <span class="text-emerald-300">"tailwind-font-variant-caps"</span>;
+<span class="text-pink-400">@import</span> <span class="text-emerald-300">"tailwind-initial-letter"</span>;
+<span class="text-pink-400">@import</span> <span class="text-emerald-300">"tailwindcss-text-rendering"</span>;</pre>
+              </div>
+            </li>
+            <li class="flex gap-x-4">
+              <span class="flex size-7 flex-none items-center justify-center rounded-full bg-indigo-600 font-mono text-sm font-semibold text-white dark:bg-indigo-500" aria-hidden="true">3</span>
+              <div class="min-w-0 flex-auto">
+                <h3 class="text-base/7 font-semibold text-gray-900 dark:text-white">Use the classes, with any variant</h3>
+                <pre class="mt-4 overflow-x-auto rounded-xl bg-gray-900 p-5 font-mono text-sm/6 text-gray-300 ring-1 ring-white/10 dark:bg-gray-800/60"><span class="text-sky-300">&lt;blockquote</span> <span class="text-amber-200">class</span>=<span class="text-emerald-300">"hanging-punctuation-first"</span><span class="text-sky-300">&gt;</span>…<span class="text-sky-300">&lt;/blockquote&gt;</span>
+<span class="text-sky-300">&lt;p</span> <span class="text-amber-200">class</span>=<span class="text-emerald-300">"first-letter:initial-letter-3"</span><span class="text-sky-300">&gt;</span>…<span class="text-sky-300">&lt;/p&gt;</span>
+<span class="text-sky-300">&lt;abbr</span> <span class="text-amber-200">class</span>=<span class="text-emerald-300">"font-variant-caps-all"</span><span class="text-sky-300">&gt;</span>NASA<span class="text-sky-300">&lt;/abbr&gt;</span>
+<span class="text-sky-300">&lt;h1</span> <span class="text-amber-200">class</span>=<span class="text-emerald-300">"md:rendering-precision"</span><span class="text-sky-300">&gt;</span>…<span class="text-sky-300">&lt;/h1&gt;</span></pre>
+              </div>
+            </li>
+          </ol>
+          <ul class="mt-10 grid gap-2 sm:grid-cols-2" aria-label="Packages on npm">
+            <li><a class="font-mono text-sm text-indigo-600 hover:text-indigo-500 dark:text-indigo-400 dark:hover:text-indigo-300" href="https://www.npmjs.com/package/tailwind-hanging-punctuation">tailwind-hanging-punctuation</a></li>
+            <li><a class="font-mono text-sm text-indigo-600 hover:text-indigo-500 dark:text-indigo-400 dark:hover:text-indigo-300" href="https://www.npmjs.com/package/tailwind-font-variant-caps">tailwind-font-variant-caps</a></li>
+            <li><a class="font-mono text-sm text-indigo-600 hover:text-indigo-500 dark:text-indigo-400 dark:hover:text-indigo-300" href="https://www.npmjs.com/package/tailwind-initial-letter">tailwind-initial-letter</a></li>
+            <li><a class="font-mono text-sm text-indigo-600 hover:text-indigo-500 dark:text-indigo-400 dark:hover:text-indigo-300" href="https://www.npmjs.com/package/tailwindcss-text-rendering">tailwindcss-text-rendering</a></li>
+          </ul>
+          <p class="mt-8 text-sm/6 text-gray-600 dark:text-gray-400">On Tailwind v3? Stay on the 1.x versions: <code class="font-mono">npm install tailwind-hanging-punctuation@1</code> and add it to <code class="font-mono">plugins</code> in <code class="font-mono">tailwind.config.js</code>.</p>
+        </section>
+
         <!-- hanging-punctuation -->
         <section id="hanging-punctuation" aria-labelledby="hanging-punctuation-title" class="scroll-mt-8">
           <p class="font-mono text-sm/6 text-indigo-600 dark:text-indigo-400">tailwind-hanging-punctuation</p>
           <h2 id="hanging-punctuation-title" class="mt-2 text-3xl font-semibold tracking-tight text-pretty text-gray-900 dark:text-white">Hanging punctuation</h2>
-          <p class="mt-6 text-base/7">Opening quotes and bullets sit outside the text block, so the letters, not the punctuation, line up with the edge. The blue hairline marks that edge.</p>
+          <p class="mt-6 text-base/7">Punctuation hangs outside the text block, so the letters, not the marks, line up with the edges. The blue hairlines mark both edges of the measure.</p>
+          <dl class="mt-6 grid gap-x-6 gap-y-2 text-sm/6 sm:grid-cols-[auto_1fr]">
+            <dt class="font-mono text-gray-900 dark:text-white">first</dt><dd>an opening quote or bracket at the start of the first line hangs left</dd>
+            <dt class="font-mono text-gray-900 dark:text-white">last</dt><dd>a closing quote or bracket at the end of the last line hangs right</dd>
+            <dt class="font-mono text-gray-900 dark:text-white">force-end</dt><dd>a comma or full stop at the end of any line hangs right</dd>
+            <dt class="font-mono text-gray-900 dark:text-white">allow-end</dt><dd>a comma or full stop hangs only when the line wouldn’t fit otherwise (here every line fits, so nothing hangs)</dd>
+            <dt class="font-mono text-gray-900 dark:text-white">book</dt><dd><code class="font-mono">first last force-end</code>: what books do</dd>
+          </dl>
 
-          <div class="mt-8 rounded-2xl bg-gray-50 p-6 ring-1 ring-gray-900/5 sm:p-10 dark:bg-gray-800/50 dark:ring-white/10" data-demo data-simulate="hanging-punctuation">
+          <div class="mt-8 rounded-2xl bg-gray-50 p-6 ring-1 ring-gray-900/5 sm:p-10 dark:bg-gray-800/50 dark:ring-white/10" data-demo data-hanging>
             <div class="flex flex-wrap gap-2" role="group" aria-label="hanging-punctuation value">
               <button type="button" data-class="hanging-punctuation-none" aria-pressed="true">none</button>
               <button type="button" data-class="hanging-punctuation-first">first</button>
@@ -63,11 +111,13 @@
               <button type="button" data-class="hanging-punctuation-allow-end">allow-end</button>
               <button type="button" data-class="hanging-punctuation-book">book</button>
             </div>
-            <blockquote class="edge-guide mt-8 max-w-md font-serif text-2xl/9 text-gray-900 sm:text-3xl/10 dark:text-white">
-              <p data-target class="hanging-punctuation-none">“Typography exists to honor content.” Every quotation mark that pushes the first letter inward is a small dishonour to the edge of the page.</p>
-            </blockquote>
+            <div class="mt-10 flex justify-center">
+              <blockquote lang="en" data-target class="hanging-punctuation-none edge-guides w-[15em] font-serif text-base/7 text-gray-900 sm:text-2xl/9 dark:text-white">
+                <p class="text-justify [text-align-last:justify]"><span class="whitespace-nowrap"><span data-hang="first">“</span>Good</span> type is <span class="whitespace-nowrap">quiet<span data-hang="end">,</span></span> patient and kind: it lets you see the <span class="whitespace-nowrap">words<span data-hang="end">,</span></span> not the <span class="whitespace-nowrap">letters<span data-hang="end">,</span></span> the <span class="whitespace-nowrap">meaning<span data-hang="end">,</span></span> not the <span class="whitespace-nowrap">marks<span data-hang="end">,</span></span> the <span class="whitespace-nowrap">story<span data-hang="end">,</span></span> not the <span class="whitespace-nowrap">page<span data-hang="end">,</span></span> and then it steps <span class="whitespace-nowrap">aside<span data-hang="end">.</span><span data-hang="last">”</span></span></p>
+              </blockquote>
+            </div>
             <p class="mt-6 text-sm/6"><code data-current class="font-mono text-gray-900 dark:text-white">hanging-punctuation-none</code></p>
-            <p class="mt-2 text-sm/6 text-gray-600 dark:text-gray-400" data-support="hanging-punctuation: first" data-supported="Your browser supports hanging-punctuation." data-unsupported="Only Safari supports hanging-punctuation. Your browser ignores it, so “first” and “book” are simulated here with a negative indent to show what Safari renders."></p>
+            <p class="mt-2 text-sm/6 text-gray-600 dark:text-gray-400" data-render-note></p>
           </div>
         </section>
 

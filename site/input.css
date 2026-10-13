@@ -20,20 +20,48 @@
   font-display: swap;
 }
 
-@theme {
-  --font-serif: "EB Garamond", ui-serif, Georgia, serif;
+@font-face {
+  font-family: "MonoLisa";
+  src: url("./fonts/MonoLisa-Normal.ttf") format("truetype");
+  font-weight: 100 1000;
+  font-style: normal;
+  font-display: swap;
 }
 
-/* A hairline at the text's left edge, so hanging punctuation is visible. */
-.edge-guide {
-  background-image: linear-gradient(var(--color-indigo-400), var(--color-indigo-400));
+@font-face {
+  font-family: "MonoLisa";
+  src: url("./fonts/MonoLisa-Italic.ttf") format("truetype");
+  font-weight: 100 1000;
+  font-style: italic;
+  font-display: swap;
+}
+
+@theme {
+  --font-serif: "EB Garamond", ui-serif, Georgia, serif;
+  --font-mono: "MonoLisa", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+/* Hairlines at both edges of the text block, so hanging punctuation is visible. */
+.edge-guides {
+  background-image:
+    linear-gradient(var(--color-indigo-400), var(--color-indigo-400)),
+    linear-gradient(var(--color-indigo-400), var(--color-indigo-400));
   background-size: 1px 100%;
+  background-position: left top, right top;
   background-repeat: no-repeat;
 }
 
-/* Approximates Safari's `hanging-punctuation: first` in browsers that ignore it. */
-.simulate-hanging {
-  text-indent: -0.42em;
+/* Simulated hanging for browsers that accept a value but don't draw it:
+   each mark becomes a zero-width box, so its glyph overflows past the edge. */
+.sim-first [data-hang="first"] {
+  display: inline-block;
+  width: 0;
+  direction: rtl;
+}
+.sim-end [data-hang="end"][data-line-end],
+.sim-last [data-hang="last"] {
+  display: inline-block;
+  width: 0;
 }
 
 [data-demo] button {

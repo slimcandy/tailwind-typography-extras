@@ -5,6 +5,7 @@
   "scripts": {
     "test": "node --test",
     "dev": "tailwindcss -i site/input.css -o site/style.css --watch",
+    "prebuild": "sh scripts/fetch-fonts.sh",
     "build": "tailwindcss -i site/input.css -o site/style.css --minify"
   },
   "devDependencies": {
