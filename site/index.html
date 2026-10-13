@@ -29,11 +29,11 @@
           Four tiny packages for the CSS typography properties Tailwind doesn’t ship: hanging punctuation, small caps, drop caps and text rendering. Each one is a single CSS file of <code class="font-mono text-base text-gray-900 dark:text-white">@utility</code> rules, so variants and arbitrary values work as usual.
         </p>
         <nav aria-label="Packages" class="mt-8 flex flex-wrap gap-x-6 gap-y-2 text-sm/6 font-semibold">
-          <a href="#install" class="text-gray-900 hover:text-indigo-600 dark:text-white dark:hover:text-indigo-400">Install</a>
           <a href="#hanging-punctuation" class="text-gray-900 hover:text-indigo-600 dark:text-white dark:hover:text-indigo-400">Hanging punctuation</a>
           <a href="#font-variant-caps" class="text-gray-900 hover:text-indigo-600 dark:text-white dark:hover:text-indigo-400">Small caps</a>
           <a href="#initial-letter" class="text-gray-900 hover:text-indigo-600 dark:text-white dark:hover:text-indigo-400">Drop caps</a>
           <a href="#text-rendering" class="text-gray-900 hover:text-indigo-600 dark:text-white dark:hover:text-indigo-400">Text rendering</a>
+          <a href="#install" class="text-gray-900 hover:text-indigo-600 dark:text-white dark:hover:text-indigo-400">Install</a>
           <a href="https://github.com/slimcandy/tailwind-typography-extras" class="text-indigo-600 hover:text-indigo-500 dark:text-indigo-400 dark:hover:text-indigo-300">GitHub <span aria-hidden="true">→</span></a>
         </nav>
       </div>
@@ -41,54 +41,6 @@
 
     <main class="px-6 pb-24 lg:px-8">
       <div class="mx-auto max-w-3xl space-y-24">
-        <!-- install -->
-        <section id="install" aria-labelledby="install-title" class="scroll-mt-8">
-          <h2 id="install-title" class="text-3xl font-semibold tracking-tight text-pretty text-gray-900 dark:text-white">Install</h2>
-          <p class="mt-6 text-base/7">Requires Tailwind CSS v4. Install only the packages you need; each one is a single CSS file.</p>
-          <ol class="mt-10 space-y-10">
-            <li class="flex gap-x-4">
-              <span class="flex size-7 flex-none items-center justify-center rounded-full bg-indigo-600 font-mono text-sm font-semibold text-white dark:bg-indigo-500" aria-hidden="true">1</span>
-              <div class="min-w-0 flex-auto">
-                <h3 class="text-base/7 font-semibold text-gray-900 dark:text-white">Add the packages</h3>
-                <pre class="mt-4 overflow-x-auto rounded-xl bg-gray-900 p-5 font-mono text-sm/6 text-gray-300 ring-1 ring-white/10 dark:bg-gray-800/60">npm install \
-  tailwind-hanging-punctuation \
-  tailwind-font-variant-caps \
-  tailwind-initial-letter \
-  tailwindcss-text-rendering</pre>
-              </div>
-            </li>
-            <li class="flex gap-x-4">
-              <span class="flex size-7 flex-none items-center justify-center rounded-full bg-indigo-600 font-mono text-sm font-semibold text-white dark:bg-indigo-500" aria-hidden="true">2</span>
-              <div class="min-w-0 flex-auto">
-                <h3 class="text-base/7 font-semibold text-gray-900 dark:text-white">Import them after Tailwind in your CSS</h3>
-                <pre class="mt-4 overflow-x-auto rounded-xl bg-gray-900 p-5 font-mono text-sm/6 text-gray-300 ring-1 ring-white/10 dark:bg-gray-800/60"><span class="text-gray-500">/* app.css */</span>
-<span class="text-pink-400">@import</span> <span class="text-emerald-300">"tailwindcss"</span>;
-<span class="text-pink-400">@import</span> <span class="text-emerald-300">"tailwind-hanging-punctuation"</span>;
-<span class="text-pink-400">@import</span> <span class="text-emerald-300">"tailwind-font-variant-caps"</span>;
-<span class="text-pink-400">@import</span> <span class="text-emerald-300">"tailwind-initial-letter"</span>;
-<span class="text-pink-400">@import</span> <span class="text-emerald-300">"tailwindcss-text-rendering"</span>;</pre>
-              </div>
-            </li>
-            <li class="flex gap-x-4">
-              <span class="flex size-7 flex-none items-center justify-center rounded-full bg-indigo-600 font-mono text-sm font-semibold text-white dark:bg-indigo-500" aria-hidden="true">3</span>
-              <div class="min-w-0 flex-auto">
-                <h3 class="text-base/7 font-semibold text-gray-900 dark:text-white">Use the classes, with any variant</h3>
-                <pre class="mt-4 overflow-x-auto rounded-xl bg-gray-900 p-5 font-mono text-sm/6 text-gray-300 ring-1 ring-white/10 dark:bg-gray-800/60"><span class="text-sky-300">&lt;blockquote</span> <span class="text-amber-200">class</span>=<span class="text-emerald-300">"hanging-punctuation-first"</span><span class="text-sky-300">&gt;</span>…<span class="text-sky-300">&lt;/blockquote&gt;</span>
-<span class="text-sky-300">&lt;p</span> <span class="text-amber-200">class</span>=<span class="text-emerald-300">"first-letter:initial-letter-3"</span><span class="text-sky-300">&gt;</span>…<span class="text-sky-300">&lt;/p&gt;</span>
-<span class="text-sky-300">&lt;abbr</span> <span class="text-amber-200">class</span>=<span class="text-emerald-300">"font-variant-caps-all"</span><span class="text-sky-300">&gt;</span>NASA<span class="text-sky-300">&lt;/abbr&gt;</span>
-<span class="text-sky-300">&lt;h1</span> <span class="text-amber-200">class</span>=<span class="text-emerald-300">"md:rendering-precision"</span><span class="text-sky-300">&gt;</span>…<span class="text-sky-300">&lt;/h1&gt;</span></pre>
-              </div>
-            </li>
-          </ol>
-          <ul class="mt-10 grid gap-2 sm:grid-cols-2" aria-label="Packages on npm">
-            <li><a class="font-mono text-sm text-indigo-600 hover:text-indigo-500 dark:text-indigo-400 dark:hover:text-indigo-300" href="https://www.npmjs.com/package/tailwind-hanging-punctuation">tailwind-hanging-punctuation</a></li>
-            <li><a class="font-mono text-sm text-indigo-600 hover:text-indigo-500 dark:text-indigo-400 dark:hover:text-indigo-300" href="https://www.npmjs.com/package/tailwind-font-variant-caps">tailwind-font-variant-caps</a></li>
-            <li><a class="font-mono text-sm text-indigo-600 hover:text-indigo-500 dark:text-indigo-400 dark:hover:text-indigo-300" href="https://www.npmjs.com/package/tailwind-initial-letter">tailwind-initial-letter</a></li>
-            <li><a class="font-mono text-sm text-indigo-600 hover:text-indigo-500 dark:text-indigo-400 dark:hover:text-indigo-300" href="https://www.npmjs.com/package/tailwindcss-text-rendering">tailwindcss-text-rendering</a></li>
-          </ul>
-          <p class="mt-8 text-sm/6 text-gray-600 dark:text-gray-400">On Tailwind v3? Stay on the 1.x versions: <code class="font-mono">npm install tailwind-hanging-punctuation@1</code> and add it to <code class="font-mono">plugins</code> in <code class="font-mono">tailwind.config.js</code>.</p>
-        </section>
-
         <!-- hanging-punctuation -->
         <section id="hanging-punctuation" aria-labelledby="hanging-punctuation-title" class="scroll-mt-8">
           <p class="font-mono text-sm/6 text-indigo-600 dark:text-indigo-400">tailwind-hanging-punctuation</p>
@@ -184,6 +136,49 @@
             <p class="mt-6 text-sm/6"><code data-current class="font-mono text-gray-900 dark:text-white">rendering-auto</code></p>
           </div>
         </section>
+
+        <!-- install -->
+        <section id="install" aria-labelledby="install-title" class="scroll-mt-8">
+          <h2 id="install-title" class="text-3xl font-semibold tracking-tight text-pretty text-gray-900 dark:text-white">Install</h2>
+          <p class="mt-6 text-base/7">Requires Tailwind CSS v4. Install only the packages you need; each one is a single CSS file.</p>
+          <ol class="mt-10 space-y-10">
+            <li class="grid grid-cols-[auto_1fr] items-center gap-x-4">
+              <span class="flex size-7 flex-none items-center justify-center rounded-full bg-indigo-600 font-mono text-sm font-semibold text-white dark:bg-indigo-500" aria-hidden="true">1</span>
+                <h3 class="text-base/7 font-semibold text-gray-900 dark:text-white">Add the packages</h3>
+                <pre class="col-span-2 -mx-6 mt-4 overflow-x-auto bg-gray-900 px-6 py-4 font-mono text-xs/6 sm:col-span-1 sm:mx-0 sm:rounded-xl sm:px-5 sm:col-start-2 sm:py-5 sm:text-sm/6 text-gray-300 ring-1 ring-white/10 dark:bg-gray-800/60">npm install \
+  tailwind-hanging-punctuation \
+  tailwind-font-variant-caps \
+  tailwind-initial-letter \
+  tailwindcss-text-rendering</pre>
+            </li>
+            <li class="grid grid-cols-[auto_1fr] items-center gap-x-4">
+              <span class="flex size-7 flex-none items-center justify-center rounded-full bg-indigo-600 font-mono text-sm font-semibold text-white dark:bg-indigo-500" aria-hidden="true">2</span>
+                <h3 class="text-base/7 font-semibold text-gray-900 dark:text-white">Import them after Tailwind in your CSS</h3>
+                <pre class="col-span-2 -mx-6 mt-4 overflow-x-auto bg-gray-900 px-6 py-4 font-mono text-xs/6 sm:col-span-1 sm:mx-0 sm:rounded-xl sm:px-5 sm:col-start-2 sm:py-5 sm:text-sm/6 text-gray-300 ring-1 ring-white/10 dark:bg-gray-800/60"><span class="text-gray-500">/* app.css */</span>
+<span class="text-pink-400">@import</span> <span class="text-emerald-300">"tailwindcss"</span>;
+<span class="text-pink-400">@import</span> <span class="text-emerald-300">"tailwind-hanging-punctuation"</span>;
+<span class="text-pink-400">@import</span> <span class="text-emerald-300">"tailwind-font-variant-caps"</span>;
+<span class="text-pink-400">@import</span> <span class="text-emerald-300">"tailwind-initial-letter"</span>;
+<span class="text-pink-400">@import</span> <span class="text-emerald-300">"tailwindcss-text-rendering"</span>;</pre>
+            </li>
+            <li class="grid grid-cols-[auto_1fr] items-center gap-x-4">
+              <span class="flex size-7 flex-none items-center justify-center rounded-full bg-indigo-600 font-mono text-sm font-semibold text-white dark:bg-indigo-500" aria-hidden="true">3</span>
+                <h3 class="text-base/7 font-semibold text-gray-900 dark:text-white">Use the classes, with any variant</h3>
+                <pre class="col-span-2 -mx-6 mt-4 overflow-x-auto bg-gray-900 px-6 py-4 font-mono text-xs/6 sm:col-span-1 sm:mx-0 sm:rounded-xl sm:px-5 sm:col-start-2 sm:py-5 sm:text-sm/6 text-gray-300 ring-1 ring-white/10 dark:bg-gray-800/60"><span class="text-sky-300">&lt;blockquote</span>
+  <span class="text-amber-200">class</span>=<span class="text-emerald-300">"hanging-punctuation-first"</span><span class="text-sky-300">&gt;</span>
+<span class="text-sky-300">&lt;p</span> <span class="text-amber-200">class</span>=<span class="text-emerald-300">"first-letter:initial-letter-3"</span><span class="text-sky-300">&gt;</span>
+<span class="text-sky-300">&lt;abbr</span> <span class="text-amber-200">class</span>=<span class="text-emerald-300">"font-variant-caps-all"</span><span class="text-sky-300">&gt;</span>
+<span class="text-sky-300">&lt;h1</span> <span class="text-amber-200">class</span>=<span class="text-emerald-300">"md:rendering-precision"</span><span class="text-sky-300">&gt;</span></pre>
+            </li>
+          </ol>
+          <ul class="mt-10 grid gap-2 sm:grid-cols-2" aria-label="Packages on npm">
+            <li><a class="inline-block py-1 font-mono text-sm text-indigo-600 hover:text-indigo-500 dark:text-indigo-400 dark:hover:text-indigo-300" href="https://www.npmjs.com/package/tailwind-hanging-punctuation">tailwind-hanging-punctuation</a></li>
+            <li><a class="inline-block py-1 font-mono text-sm text-indigo-600 hover:text-indigo-500 dark:text-indigo-400 dark:hover:text-indigo-300" href="https://www.npmjs.com/package/tailwind-font-variant-caps">tailwind-font-variant-caps</a></li>
+            <li><a class="inline-block py-1 font-mono text-sm text-indigo-600 hover:text-indigo-500 dark:text-indigo-400 dark:hover:text-indigo-300" href="https://www.npmjs.com/package/tailwind-initial-letter">tailwind-initial-letter</a></li>
+            <li><a class="inline-block py-1 font-mono text-sm text-indigo-600 hover:text-indigo-500 dark:text-indigo-400 dark:hover:text-indigo-300" href="https://www.npmjs.com/package/tailwindcss-text-rendering">tailwindcss-text-rendering</a></li>
+          </ul>
+          <p class="mt-8 text-sm/6 text-gray-600 dark:text-gray-400">On Tailwind v3? Stay on the 1.x versions: <code class="font-mono">npm install tailwind-hanging-punctuation@1</code> and add it to <code class="font-mono">plugins</code> in <code class="font-mono">tailwind.config.js</code>.</p>
+        </section>
       </div>
     </main>
 
@@ -191,9 +186,9 @@
       <div class="mx-auto flex max-w-3xl flex-col gap-4 text-sm/6 text-gray-600 sm:flex-row sm:justify-between dark:text-gray-400">
         <p>Not affiliated with the official <code class="font-mono">@tailwindcss/typography</code>. MIT licence.</p>
         <p>
-          <a href="https://github.com/slimcandy/tailwind-typography-extras" class="font-semibold text-gray-900 hover:text-indigo-600 dark:text-white dark:hover:text-indigo-400">GitHub</a>
+          <a href="https://github.com/slimcandy/tailwind-typography-extras" class="inline-block py-1 font-semibold text-gray-900 hover:text-indigo-600 dark:text-white dark:hover:text-indigo-400">GitHub</a>
           <span aria-hidden="true" class="mx-2">·</span>
-          <a href="https://avolkov.dev" class="font-semibold text-gray-900 hover:text-indigo-600 dark:text-white dark:hover:text-indigo-400">Aleksei Volkov</a>
+          <a href="https://avolkov.dev" class="inline-block py-1 font-semibold text-gray-900 hover:text-indigo-600 dark:text-white dark:hover:text-indigo-400">Aleksei Volkov</a>
         </p>
       </div>
     </footer>
