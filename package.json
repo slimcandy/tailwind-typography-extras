@@ -1,0 +1,19 @@
+{
+  "name": "tailwind-typography-extras",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test",
+    "dev": "tailwindcss -i site/input.css -o site/style.css --watch",
+    "build": "tailwindcss -i site/input.css -o site/style.css --minify"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "4.3.3",
+    "@tailwindcss/node": "4.3.3",
+    "tailwind-font-variant-caps": "file:packages/tailwind-font-variant-caps",
+    "tailwind-hanging-punctuation": "file:packages/tailwind-hanging-punctuation",
+    "tailwind-initial-letter": "file:packages/tailwind-initial-letter",
+    "tailwindcss": "4.3.3",
+    "tailwindcss-text-rendering": "file:packages/tailwindcss-text-rendering"
+  }
+}

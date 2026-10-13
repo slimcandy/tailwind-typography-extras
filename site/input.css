@@ -1,0 +1,42 @@
+@import "tailwindcss";
+@import "tailwindcss-text-rendering";
+@import "tailwind-hanging-punctuation";
+@import "tailwind-font-variant-caps";
+@import "tailwind-initial-letter";
+
+@font-face {
+  font-family: "EB Garamond";
+  src: url("./fonts/eb-garamond.woff2") format("woff2");
+  font-weight: 400 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "EB Garamond";
+  src: url("./fonts/eb-garamond-italic.woff2") format("woff2");
+  font-weight: 400 800;
+  font-style: italic;
+  font-display: swap;
+}
+
+@theme {
+  --font-serif: "EB Garamond", ui-serif, Georgia, serif;
+}
+
+/* A hairline at the text's left edge, so hanging punctuation is visible. */
+.edge-guide {
+  background-image: linear-gradient(var(--color-indigo-400), var(--color-indigo-400));
+  background-size: 1px 100%;
+  background-repeat: no-repeat;
+}
+
+/* Approximates Safari's `hanging-punctuation: first` in browsers that ignore it. */
+.simulate-hanging {
+  text-indent: -0.42em;
+}
+
+[data-demo] button {
+  @apply cursor-pointer rounded-md bg-white px-3 py-1.5 font-mono text-sm font-medium text-gray-900 shadow-xs ring-1 ring-gray-300 ring-inset hover:bg-gray-50 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 dark:bg-white/10 dark:text-white dark:shadow-none dark:ring-white/10 dark:hover:bg-white/20;
+  @apply aria-pressed:bg-indigo-600 aria-pressed:text-white aria-pressed:ring-indigo-600 aria-pressed:hover:bg-indigo-500 dark:aria-pressed:bg-indigo-500 dark:aria-pressed:ring-indigo-500;
+}

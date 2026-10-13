@@ -1,0 +1,38 @@
+{
+  "name": "tailwind-font-variant-caps",
+  "version": "2.0.0",
+  "description": "font-variant-caps utilities for Tailwind CSS v4: small caps, petite caps, titling caps",
+  "type": "module",
+  "style": "./index.css",
+  "exports": {
+    ".": {
+      "style": "./index.css",
+      "default": "./index.css"
+    }
+  },
+  "files": [
+    "index.css"
+  ],
+  "peerDependencies": {
+    "tailwindcss": "^4"
+  },
+  "keywords": [
+    "tailwind",
+    "tailwindcss",
+    "tailwind-v4",
+    "font-variant-caps",
+    "small-caps",
+    "typography"
+  ],
+  "author": "Aleksei Volkov",
+  "license": "MIT",
+  "homepage": "https://type.avolkov.dev",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/slimcandy/tailwind-typography-extras.git",
+    "directory": "packages/tailwind-font-variant-caps"
+  },
+  "bugs": {
+    "url": "https://github.com/slimcandy/tailwind-typography-extras/issues"
+  }
+}

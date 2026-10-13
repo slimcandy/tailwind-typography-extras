@@ -1,0 +1,23 @@
+/* hanging-punctuation utilities for Tailwind CSS v4 (Safari only, progressive enhancement) */
+@utility hanging-punctuation-none {
+  hanging-punctuation: none;
+}
+@utility hanging-punctuation-first {
+  hanging-punctuation: first;
+}
+@utility hanging-punctuation-last {
+  hanging-punctuation: last;
+}
+@utility hanging-punctuation-force-end {
+  hanging-punctuation: force-end;
+}
+@utility hanging-punctuation-allow-end {
+  hanging-punctuation: allow-end;
+}
+/* The usual choice for body text: quotes and bullets hang at both edges. */
+@utility hanging-punctuation-book {
+  hanging-punctuation: first last force-end;
+}
+@utility hanging-punctuation-* {
+  hanging-punctuation: --value([*]);
+}

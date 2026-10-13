@@ -1,0 +1,22 @@
+/* font-variant-caps utilities for Tailwind CSS v4 */
+@utility font-variant-caps-normal {
+  font-variant-caps: normal;
+}
+@utility font-variant-caps-small {
+  font-variant-caps: small-caps;
+}
+@utility font-variant-caps-all {
+  font-variant-caps: all-small-caps;
+}
+@utility font-variant-caps-petite {
+  font-variant-caps: petite-caps;
+}
+@utility font-variant-caps-all-petite {
+  font-variant-caps: all-petite-caps;
+}
+@utility font-variant-caps-unicase {
+  font-variant-caps: unicase;
+}
+@utility font-variant-caps-titling {
+  font-variant-caps: titling-caps;
+}

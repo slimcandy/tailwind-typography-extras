@@ -1,0 +1,14 @@
+/* initial-letter utilities for Tailwind CSS v4: drop caps and raised caps */
+@utility initial-letter-normal {
+  -webkit-initial-letter: normal;
+  initial-letter: normal;
+}
+@utility initial-letter-initial {
+  -webkit-initial-letter: initial;
+  initial-letter: initial;
+}
+/* initial-letter-3 (size), initial-letter-[3_2] (size and sink) */
+@utility initial-letter-* {
+  -webkit-initial-letter: --value(number, [*]);
+  initial-letter: --value(number, [*]);
+}

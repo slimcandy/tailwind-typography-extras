@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en" class="bg-white dark:bg-gray-900">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Tailwind Typography Extras</title>
+    <meta name="description" content="Four tiny Tailwind CSS v4 packages for the typography properties Tailwind doesn't ship: hanging punctuation, small caps, drop caps and text rendering." />
+    <meta property="og:title" content="Tailwind Typography Extras" />
+    <meta property="og:description" content="Hanging punctuation, small caps, drop caps and text rendering for Tailwind CSS v4. Plain CSS, no JavaScript." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://type.avolkov.dev/" />
+    <meta property="og:image" content="https://type.avolkov.dev/og.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#111827" media="(prefers-color-scheme: dark)" />
+    <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+    <link rel="preload" href="./fonts/eb-garamond.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./demo.js" defer></script>
+  </head>
+  <body class="text-gray-700 antialiased dark:text-gray-300">
+    <header class="px-6 pt-24 pb-16 sm:pt-32 lg:px-8">
+      <div class="mx-auto max-w-3xl">
+        <p class="text-base/7 font-semibold text-indigo-600 dark:text-indigo-400">Tailwind CSS v4 · plain CSS, no JavaScript</p>
+        <h1 class="mt-2 font-serif text-5xl font-medium tracking-tight text-pretty text-gray-900 sm:text-7xl dark:text-white">Typography extras</h1>
+        <p class="mt-8 text-lg font-medium text-pretty text-gray-600 sm:text-xl/8 dark:text-gray-400">
+          Four tiny packages for the CSS typography properties Tailwind doesn’t ship: hanging punctuation, small caps, drop caps and text rendering. Each one is a single CSS file of <code class="font-mono text-base text-gray-900 dark:text-white">@utility</code> rules, so variants and arbitrary values work as usual.
+        </p>
+        <div class="mt-10 overflow-x-auto rounded-xl bg-gray-900 p-5 font-mono text-sm/6 text-gray-300 ring-1 ring-white/10 dark:bg-gray-800/60">
+          <pre><span class="text-gray-500">/* app.css */</span>
+<span class="text-pink-400">@import</span> <span class="text-emerald-300">"tailwindcss"</span>;
+<span class="text-pink-400">@import</span> <span class="text-emerald-300">"tailwind-hanging-punctuation"</span>;
+<span class="text-pink-400">@import</span> <span class="text-emerald-300">"tailwind-font-variant-caps"</span>;
+<span class="text-pink-400">@import</span> <span class="text-emerald-300">"tailwind-initial-letter"</span>;
+<span class="text-pink-400">@import</span> <span class="text-emerald-300">"tailwindcss-text-rendering"</span>;</pre>
+        </div>
+        <nav aria-label="Packages" class="mt-8 flex flex-wrap gap-x-6 gap-y-2 text-sm/6 font-semibold">
+          <a href="#hanging-punctuation" class="text-gray-900 hover:text-indigo-600 dark:text-white dark:hover:text-indigo-400">Hanging punctuation</a>
+          <a href="#font-variant-caps" class="text-gray-900 hover:text-indigo-600 dark:text-white dark:hover:text-indigo-400">Small caps</a>
+          <a href="#initial-letter" class="text-gray-900 hover:text-indigo-600 dark:text-white dark:hover:text-indigo-400">Drop caps</a>
+          <a href="#text-rendering" class="text-gray-900 hover:text-indigo-600 dark:text-white dark:hover:text-indigo-400">Text rendering</a>
+          <a href="https://github.com/slimcandy/tailwind-typography-extras" class="text-indigo-600 hover:text-indigo-500 dark:text-indigo-400 dark:hover:text-indigo-300">GitHub <span aria-hidden="true">→</span></a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="px-6 pb-24 lg:px-8">
+      <div class="mx-auto max-w-3xl space-y-24">
+        <!-- hanging-punctuation -->
+        <section id="hanging-punctuation" aria-labelledby="hanging-punctuation-title" class="scroll-mt-8">
+          <p class="font-mono text-sm/6 text-indigo-600 dark:text-indigo-400">tailwind-hanging-punctuation</p>
+          <h2 id="hanging-punctuation-title" class="mt-2 text-3xl font-semibold tracking-tight text-pretty text-gray-900 dark:text-white">Hanging punctuation</h2>
+          <p class="mt-6 text-base/7">Opening quotes and bullets sit outside the text block, so the letters, not the punctuation, line up with the edge. The blue hairline marks that edge.</p>
+
+          <div class="mt-8 rounded-2xl bg-gray-50 p-6 ring-1 ring-gray-900/5 sm:p-10 dark:bg-gray-800/50 dark:ring-white/10" data-demo data-simulate="hanging-punctuation">
+            <div class="flex flex-wrap gap-2" role="group" aria-label="hanging-punctuation value">
+              <button type="button" data-class="hanging-punctuation-none" aria-pressed="true">none</button>
+              <button type="button" data-class="hanging-punctuation-first">first</button>
+              <button type="button" data-class="hanging-punctuation-last">last</button>
+              <button type="button" data-class="hanging-punctuation-force-end">force-end</button>
+              <button type="button" data-class="hanging-punctuation-allow-end">allow-end</button>
+              <button type="button" data-class="hanging-punctuation-book">book</button>
+            </div>
+            <blockquote class="edge-guide mt-8 max-w-md font-serif text-2xl/9 text-gray-900 sm:text-3xl/10 dark:text-white">
+              <p data-target class="hanging-punctuation-none">“Typography exists to honor content.” Every quotation mark that pushes the first letter inward is a small dishonour to the edge of the page.</p>
+            </blockquote>
+            <p class="mt-6 text-sm/6"><code data-current class="font-mono text-gray-900 dark:text-white">hanging-punctuation-none</code></p>
+            <p class="mt-2 text-sm/6 text-gray-600 dark:text-gray-400" data-support="hanging-punctuation: first" data-supported="Your browser supports hanging-punctuation." data-unsupported="Only Safari supports hanging-punctuation. Your browser ignores it, so “first” and “book” are simulated here with a negative indent to show what Safari renders."></p>
+          </div>
+        </section>
+
+        <!-- font-variant-caps -->
+        <section id="font-variant-caps" aria-labelledby="font-variant-caps-title" class="scroll-mt-8">
+          <p class="font-mono text-sm/6 text-indigo-600 dark:text-indigo-400">tailwind-font-variant-caps</p>
+          <h2 id="font-variant-caps-title" class="mt-2 text-3xl font-semibold tracking-tight text-pretty text-gray-900 dark:text-white">Small caps</h2>
+          <p class="mt-6 text-base/7">Acronyms in full capitals shout in running text. Real small caps are drawn by the type designer at the height and weight of lowercase letters, so they sit calmly in a line. This page uses EB Garamond, which has true small caps and petite caps.</p>
+
+          <div class="mt-8 rounded-2xl bg-gray-50 p-6 ring-1 ring-gray-900/5 sm:p-10 dark:bg-gray-800/50 dark:ring-white/10" data-demo>
+            <div class="flex flex-wrap gap-2" role="group" aria-label="font-variant-caps value">
+              <button type="button" data-class="font-variant-caps-normal" aria-pressed="true">normal</button>
+              <button type="button" data-class="font-variant-caps-small">small</button>
+              <button type="button" data-class="font-variant-caps-all">all</button>
+              <button type="button" data-class="font-variant-caps-petite">petite</button>
+              <button type="button" data-class="font-variant-caps-all-petite">all-petite</button>
+              <button type="button" data-class="font-variant-caps-unicase">unicase</button>
+              <button type="button" data-class="font-variant-caps-titling">titling</button>
+            </div>
+            <p class="mt-8 font-serif text-2xl/9 text-gray-900 sm:text-3xl/10 dark:text-white">
+              In 1975 the <span data-target class="font-variant-caps-normal">ESA</span> and <span data-target class="font-variant-caps-normal">NASA</span> teams met at <span data-target class="font-variant-caps-normal">9 AM</span> to compare notes on the Apollo–Soyuz docking.
+            </p>
+            <p class="mt-6 text-sm/6"><code data-current class="font-mono text-gray-900 dark:text-white">font-variant-caps-normal</code></p>
+            <p class="mt-2 text-sm/6 text-gray-600 dark:text-gray-400">EB Garamond has no unicase or titling glyphs, so those two show the browser’s fallback: the text stays as it is.</p>
+          </div>
+        </section>
+
+        <!-- initial-letter -->
+        <section id="initial-letter" aria-labelledby="initial-letter-title" class="scroll-mt-8">
+          <p class="font-mono text-sm/6 text-indigo-600 dark:text-indigo-400">tailwind-initial-letter</p>
+          <h2 id="initial-letter-title" class="mt-2 text-3xl font-semibold tracking-tight text-pretty text-gray-900 dark:text-white">Drop caps</h2>
+          <p class="mt-6 text-base/7">A drop cap that the browser sizes and aligns to the lines of text, with no floats or magic numbers. Use it with the <code class="font-mono text-sm text-gray-900 dark:text-white">first-letter:</code> variant. The last option sets size and sink separately: three lines tall, sunk two lines.</p>
+
+          <div class="mt-8 rounded-2xl bg-gray-50 p-6 ring-1 ring-gray-900/5 sm:p-10 dark:bg-gray-800/50 dark:ring-white/10" data-demo>
+            <div class="flex flex-wrap gap-2" role="group" aria-label="initial-letter value">
+              <button type="button" data-class="first-letter:initial-letter-normal">normal</button>
+              <button type="button" data-class="first-letter:initial-letter-2">2</button>
+              <button type="button" data-class="first-letter:initial-letter-3" aria-pressed="true">3</button>
+              <button type="button" data-class="first-letter:initial-letter-4">4</button>
+              <button type="button" data-class="first-letter:initial-letter-[3_2]">[3_2]</button>
+            </div>
+            <p data-target class="mt-8 font-serif text-xl/8 text-gray-900 first-letter:me-2 first-letter:font-semibold first-letter:text-indigo-600 first-letter:initial-letter-3 dark:text-white dark:first-letter:text-indigo-400">
+              Once the manuscript had been copied, the scribe left a square of empty parchment at the start of each chapter. Weeks later a second hand, the illuminator’s, would fill it with a single tall letter in red and gold, sized to sink exactly three lines into the text. Five centuries on, the browser can do the measuring for us.
+            </p>
+            <p class="mt-6 text-sm/6"><code data-current class="font-mono text-gray-900 dark:text-white">first-letter:initial-letter-3</code></p>
+            <p class="mt-2 text-sm/6 text-gray-600 dark:text-gray-400" data-support="initial-letter: 3" data-support-alt="-webkit-initial-letter: 3" data-supported="Your browser supports initial-letter." data-unsupported="Your browser ignores initial-letter (Firefox doesn’t support it yet), so the first letter stays normal. Safari and Chrome 110+ show the drop cap."></p>
+          </div>
+        </section>
+
+        <!-- text-rendering -->
+        <section id="text-rendering" aria-labelledby="text-rendering-title" class="scroll-mt-8">
+          <p class="font-mono text-sm/6 text-indigo-600 dark:text-indigo-400">tailwindcss-text-rendering</p>
+          <h2 id="text-rendering-title" class="mt-2 text-3xl font-semibold tracking-tight text-pretty text-gray-900 dark:text-white">Text rendering</h2>
+          <p class="mt-6 text-base/7">A hint to the browser about what to favour when drawing text. Modern browsers already kern and use ligatures by default, so the difference is often subtle. <code class="font-mono text-sm text-gray-900 dark:text-white">speed</code> may turn kerning and ligatures off; <code class="font-mono text-sm text-gray-900 dark:text-white">precision</code> keeps glyph shapes exact when text is scaled.</p>
+
+          <div class="mt-8 rounded-2xl bg-gray-50 p-6 ring-1 ring-gray-900/5 sm:p-10 dark:bg-gray-800/50 dark:ring-white/10" data-demo>
+            <div class="flex flex-wrap gap-2" role="group" aria-label="text-rendering value">
+              <button type="button" data-class="rendering-auto" aria-pressed="true">auto</button>
+              <button type="button" data-class="rendering-speed">speed</button>
+              <button type="button" data-class="rendering-legibility">legibility</button>
+              <button type="button" data-class="rendering-precision">precision</button>
+            </div>
+            <p data-target class="rendering-auto mt-8 font-serif text-5xl/tight text-gray-900 sm:text-7xl/tight dark:text-white">Waffle office, AVATAR To Wo.</p>
+            <p class="mt-6 text-sm/6"><code data-current class="font-mono text-gray-900 dark:text-white">rendering-auto</code></p>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="border-t border-gray-900/10 px-6 py-12 lg:px-8 dark:border-white/10">
+      <div class="mx-auto flex max-w-3xl flex-col gap-4 text-sm/6 text-gray-600 sm:flex-row sm:justify-between dark:text-gray-400">
+        <p>Not affiliated with the official <code class="font-mono">@tailwindcss/typography</code>. MIT licence.</p>
+        <p>
+          <a href="https://github.com/slimcandy/tailwind-typography-extras" class="font-semibold text-gray-900 hover:text-indigo-600 dark:text-white dark:hover:text-indigo-400">GitHub</a>
+          <span aria-hidden="true" class="mx-2">·</span>
+          <a href="https://avolkov.dev" class="font-semibold text-gray-900 hover:text-indigo-600 dark:text-white dark:hover:text-indigo-400">Aleksei Volkov</a>
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

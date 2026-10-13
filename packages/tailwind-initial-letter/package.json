@@ -1,0 +1,38 @@
+{
+  "name": "tailwind-initial-letter",
+  "version": "2.0.0",
+  "description": "initial-letter utilities for Tailwind CSS v4: drop caps and raised caps",
+  "type": "module",
+  "style": "./index.css",
+  "exports": {
+    ".": {
+      "style": "./index.css",
+      "default": "./index.css"
+    }
+  },
+  "files": [
+    "index.css"
+  ],
+  "peerDependencies": {
+    "tailwindcss": "^4"
+  },
+  "keywords": [
+    "tailwind",
+    "tailwindcss",
+    "tailwind-v4",
+    "initial-letter",
+    "drop-cap",
+    "typography"
+  ],
+  "author": "Aleksei Volkov",
+  "license": "MIT",
+  "homepage": "https://type.avolkov.dev",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/slimcandy/tailwind-typography-extras.git",
+    "directory": "packages/tailwind-initial-letter"
+  },
+  "bugs": {
+    "url": "https://github.com/slimcandy/tailwind-typography-extras/issues"
+  }
+}

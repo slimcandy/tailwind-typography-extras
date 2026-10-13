@@ -1,0 +1,16 @@
+/* text-rendering utilities for Tailwind CSS v4 */
+@utility rendering-auto {
+  text-rendering: auto;
+}
+@utility rendering-speed {
+  text-rendering: optimizeSpeed;
+}
+@utility rendering-legibility {
+  text-rendering: optimizeLegibility;
+}
+@utility rendering-precision {
+  text-rendering: geometricPrecision;
+}
+@utility rendering-* {
+  text-rendering: --value([*]);
+}

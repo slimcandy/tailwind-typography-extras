@@ -1,0 +1,38 @@
+{
+  "name": "tailwindcss-text-rendering",
+  "version": "2.0.0",
+  "description": "text-rendering utilities for Tailwind CSS v4",
+  "type": "module",
+  "style": "./index.css",
+  "exports": {
+    ".": {
+      "style": "./index.css",
+      "default": "./index.css"
+    }
+  },
+  "files": [
+    "index.css"
+  ],
+  "peerDependencies": {
+    "tailwindcss": "^4"
+  },
+  "keywords": [
+    "tailwind",
+    "tailwindcss",
+    "tailwind-v4",
+    "text-rendering",
+    "optimizeLegibility",
+    "geometricPrecision"
+  ],
+  "author": "Aleksei Volkov",
+  "license": "MIT",
+  "homepage": "https://type.avolkov.dev",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/slimcandy/tailwind-typography-extras.git",
+    "directory": "packages/tailwindcss-text-rendering"
+  },
+  "bugs": {
+    "url": "https://github.com/slimcandy/tailwind-typography-extras/issues"
+  }
+}
