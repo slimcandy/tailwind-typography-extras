@@ -11,7 +11,7 @@ Best in Safari: today it is the only browser that draws hanging punctuation.
 
 <!-- Happy-path video: drag /private/tmp/claude-501/-Users-alex-Downloads-github/eba4b07d-fb10-47d6-8ce4-42740ad111e8/scratchpad/media/tailwind-typography-extras/happy-path.mp4 onto this line in the GitHub editor -->
 
-<img src=".github/readme/02-hanging.jpg" width="49%" alt="The hanging-punctuation demo: the opening quote hangs outside the text block"> <img src=".github/readme/04-drop-cap.jpg" width="49%" alt="The drop-cap demo: a three-line initial letter set by the browser">
+<img src=".github/readme/02-hanging.jpg" width="32%" alt="The hanging-punctuation demo: the opening quote hangs outside the text block"> <img src=".github/readme/03-small-caps.jpg" width="32%" alt="The small-caps demo: ESA and NASA in true small capitals"> <img src=".github/readme/04-drop-cap.jpg" width="32%" alt="The drop-cap demo: a three-line initial letter set by the browser">
 
 </div>
 
