@@ -107,3 +107,9 @@
     border-inline: 1px solid CanvasText;
   }
 }
+
+/* Notched iPhones in landscape: keep the text out of the rounded corners. */
+body {
+  padding-inline: env(safe-area-inset-left) env(safe-area-inset-right);
+  padding-bottom: env(safe-area-inset-bottom);
+}
