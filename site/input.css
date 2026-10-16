@@ -68,3 +68,42 @@
   @apply cursor-pointer rounded-md bg-white px-3 py-1.5 font-mono text-sm font-medium text-gray-900 shadow-xs ring-1 ring-gray-300 ring-inset hover:bg-gray-50 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 dark:bg-white/10 dark:text-white dark:shadow-none dark:ring-white/10 dark:hover:bg-white/20;
   @apply aria-pressed:bg-indigo-600 aria-pressed:text-white aria-pressed:ring-indigo-600 aria-pressed:hover:bg-indigo-500 dark:aria-pressed:bg-indigo-500 dark:aria-pressed:ring-indigo-500;
 }
+
+/* OS settings. Nothing on the page animates, so prefers-reduced-motion needs no guard.
+   With "Increase contrast" on, the tokens behind the secondary text, the links and the
+   pressed buttons move two steps darker (lighter in dark mode): the design stays, the
+   text passes WCAG AAA. The values are Tailwind's own gray-200/800, indigo-200/700/800. */
+@media (prefers-contrast: more) {
+  :root {
+    --color-gray-400: oklch(92.8% 0.006 264.531);
+    --color-gray-600: oklch(27.8% 0.033 256.848);
+    --color-indigo-400: oklch(87% 0.065 274.039);
+    --color-indigo-500: oklch(45.7% 0.24 277.023);
+    --color-indigo-600: oklch(39.8% 0.195 277.366);
+  }
+  .edge-guides {
+    background-image: linear-gradient(currentColor, currentColor), linear-gradient(currentColor, currentColor);
+  }
+}
+
+/* Windows high contrast drops box-shadow rings, background colours and gradients, so the
+   buttons get a real outline, the pressed one a thick outline and an underline, and the
+   hairlines become borders. */
+@media (forced-colors: active) {
+  [data-demo] button {
+    outline: 1px solid ButtonBorder;
+    outline-offset: -1px;
+  }
+  [data-demo] button[aria-pressed="true"] {
+    outline-width: 3px;
+    outline-offset: -3px;
+    text-decoration: underline;
+  }
+  [data-demo] button:focus-visible {
+    outline: 2px solid Highlight;
+    outline-offset: 2px;
+  }
+  .edge-guides {
+    border-inline: 1px solid CanvasText;
+  }
+}
