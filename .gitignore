@@ -1,4 +1,4 @@
 node_modules/
 site/style.css
 # Licensed fonts: must not be published (see scripts/fetch-fonts.sh)
-/site/fonts/MonoLisa-*.ttf
+/site/fonts/MonoLisa*
